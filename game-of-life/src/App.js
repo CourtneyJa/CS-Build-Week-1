@@ -255,30 +255,28 @@ class App extends Component {
           Generations:<div className="innerbox">{this.state.generation}</div>
         </h2>
         <ButtonGroup className="buttons">
-          <Button onClick={this.playButton}>Play</Button>
-          <Button onClick={this.pauseButton}>Pause</Button>
-          <Button onClick={this.clearButton}>Clear</Button>
-          <Button onClick={this.seedGame}>Seed</Button>
-          <Button onClick={this.slowButton}>Slow</Button>
-          <Button onClick={this.normalButton}>Normal</Button>
-          <Button onClick={this.fastButton}>Fast</Button>
+          <Button onClick={this.playButton} color="primary">Start</Button>
+          <Button onClick={this.pauseButton}color="primary">Pause</Button>
+          <Button onClick={this.clearButton}color="primary">Clear</Button>
+          <Button onClick={this.seedGame}color="primary">Seed</Button>
+          <Button onClick={this.slowButton}color="primary">Slow</Button>
+          <Button onClick={this.normalButton}color="primary">Normal</Button>
+          <Button onClick={this.fastButton}color="primary">Fast</Button>
           <ButtonDropdown
-            // className="dropup"
             isOpen={this.state.dropdownOpen}
             toggle={this.toggle}
           >
-            <DropdownToggle caret>Patterns</DropdownToggle>
+            <DropdownToggle caret color="primary">Shapes</DropdownToggle>
             <DropdownMenu>
               <DropdownItem onClick={this.gliderGun}>Glider Gun</DropdownItem>
               <DropdownItem onClick={this.acorn}>Acorn</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
           <ButtonDropdown
-            // className="dropup"
             isOpen={this.state.dropdownOpen2}
             toggle={this.toggle2}
           >
-            <DropdownToggle caret>Size</DropdownToggle>
+            <DropdownToggle caret color="primary">Grid Size</DropdownToggle>
             <DropdownMenu>
               <DropdownItem onClick={this.gridSmall}>Small</DropdownItem>
               <DropdownItem onClick={this.gridLarge}>Large</DropdownItem>
@@ -286,7 +284,7 @@ class App extends Component {
           </ButtonDropdown>
         </ButtonGroup>
         <span>
-          <Button className="modals" color="danger" onClick={this.toggleModal}>
+          <Button className="modals" color="info" onClick={this.toggleModal}>
             Rules
           </Button>
           <Modal
@@ -295,7 +293,7 @@ class App extends Component {
             className={this.props.className}
           >
             <ModalHeader toggle={this.toggleModal}>
-              Rules of the Game
+              How it Works
             </ModalHeader>
             <ModalBody>
               <ol>
@@ -320,7 +318,7 @@ class App extends Component {
           </Modal>
         </span>
         <span>
-          <Button className="modals" color="danger" onClick={this.toggleModal2}>
+          <Button className="modals" color="info" onClick={this.toggleModal2}>
             About
           </Button>
           <Modal
