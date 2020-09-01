@@ -1,20 +1,19 @@
-import React from "react";
-import "./game.css";
+import React, { Component } from "react";
+import "./Cell.css";
 
-const Cell = (props) => {
-  const width = ((1 / props.size) * 100).toString();
-  const styleCell = {
-    width: width + "%",
-    height: "100%",
+class Cell extends Component {
+  selectBox = () => {
+    this.props.selectBox(this.props.row, this.props.col);
   };
-  return (
-    <div
-      className={props.value ? "cell on" : "cell off"}
-      onClick={() => {
-        if (!props.running) props.toggle(props.yAxis, props.xAxis);
-      }}
-    />
-  );
-};
+  render() {
+    return (
+      <div
+        className={this.props.boxClass}
+        id={this.props.id}
+        onClick={this.selectBox}
+      />
+    );
+  }
+}
 
 export default Cell;

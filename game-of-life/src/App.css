@@ -1,15 +1,20 @@
 .App {
   text-align: center;
-  width: 1000px;
-  display: flex;
-  justify-content: center;
-
-  @media screen and (min-width: 800px) {
-    width: 90%;
-  }
-  
 }
 
-@media screen and (min-width: 400px) {
-  .App{width: 90%;}
+h1,
+h2 {
+  margin: 20px 0;
+}
+.innerbox {
+  width: 50px;
+  max-width: 50px;
+  display: inline-block;
+}
+.buttons {
+  margin-bottom: 30px;
+}
+.modals {
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
